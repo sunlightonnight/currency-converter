@@ -14,7 +14,12 @@ while True:
         print("Выход")
         break
     elif valute in rates:
-        amount = float(input(f"Введите сумму в {valute}:"))
+        while True:
+            try:
+                amount = float(input(f"Введите сумму в {valute}:"))
+                break
+            except ValueError:
+                print("Ошибка! Нужно ввести число. Попробуйте снова.")
         result = amount * rates["RUB"] / rates[valute]
         print(f"{amount} {valute} = {result:.2f} RUB")
     else:
