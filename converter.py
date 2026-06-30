@@ -8,15 +8,16 @@ while True:
 
     rates = data["rates"] 
 
-    print("\nВведите код валюты (RUB, EUR, KZT) или 'ВЫХОД'")
-    valute = (input("Введите валюту:")).upper()
+    print("\nВведите код валюты (USD, EUR, KZT) или 'ВЫХОД'")
+    valute = input("Введите валюту: ").upper()
+
     if valute == "ВЫХОД":
-        print("Выход")
+        print("Выход из программы.")
         break
     elif valute in rates:
         while True:
             try:
-                amount = float(input(f"Введите сумму в {valute}:"))
+                amount = float(input(f"Введите сумму в {valute}: "))
                 break
             except ValueError:
                 print("Ошибка! Нужно ввести число. Попробуйте снова.")
