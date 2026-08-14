@@ -25,6 +25,10 @@ A simple currency converter in Python. Uses the ExchangeRate API to get live exc
 ## Пример / Example
 
 Введите код валюты (USD, EUR, KZT) или 'ВЫХОД'
+Введите валюту: USD
+Введите сумму в USD: 100
+100.0 USD = 8512.50 RUB
+
 ---
 
 ## Код / Code
@@ -56,9 +60,6 @@ while True:
         print(f"{amount} {valute} = {result:.2f} RUB")
     except ValueError:
         print("Ошибка! Нужно ввести число.")
-Введите валюту: USD
-Введите сумму в USD: 100
-100.0 USD = 8512.50 RUB
 ```
 ## Author / Автор
 
